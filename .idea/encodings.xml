@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Test.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Test1.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/css" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/joker_box_pop_up.js" charset="UTF-8" />

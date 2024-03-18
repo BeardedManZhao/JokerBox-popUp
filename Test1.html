@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pop_up</title>
+</head>
+<body id="b">
+<p>这里是原本的网页内容</p>
+</body>
+
+<!-- 在下面直接进行引用即可！ -->
+<link href="css/joker_box_pop_up.css" rel="stylesheet">
+<script src="./js/joker_box_pop_up.js"></script>
+<script>
+    window.onload = () => {
+        // 创建弹窗 传递一个元素进去
+        const pop_up = JokerBox_popUp.create(document.getElementById("b"));
+        // 显示弹窗 在这里代表显示 10000 毫秒
+        pop_up.show("这里是弹窗内容", 10000)
+    }
+</script>
+</html>
