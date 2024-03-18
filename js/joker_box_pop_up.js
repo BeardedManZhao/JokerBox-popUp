@@ -59,6 +59,10 @@ class JokerBox_popUp {
             this.style.color = color['color'];
             this.style.transform = 'scale(100%)';
         }
+
+        this.dom.onanimationend = function () {
+            this.style.animation = 'none';
+        }
     }
 
     static getVersion() {
@@ -71,9 +75,8 @@ class JokerBox_popUp {
      * @param timeMs {number} 弹窗动画+显示的总时间 毫秒数值
      */
     show(msg, timeMs = 10000) {
-        this.dom.style.animation = 'none';
-        this.dom.style.animation = `jokerBox_pop_up_show_display_life ${timeMs}ms forwards`;
         this.textDom.innerText = msg;
+        this.dom.style.animation = `jokerBox_pop_up_show_display_life ${timeMs}ms forwards`;
     }
 }
 
