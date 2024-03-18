@@ -69,7 +69,7 @@ class JokerBox_popUp {
      * @param msg {string} 需要在弹窗中显示的内容
      * @param timeMs {number} 弹窗动画+显示的总时间 毫秒数值
      */
-    show(msg, timeMs = 2000) {
+    show(msg, timeMs = 10000) {
         this.dom.style.animation = `jokerBox_pop_up_show_display_life ${timeMs}ms forwards`;
         this.textDom.innerText = msg;
     }
