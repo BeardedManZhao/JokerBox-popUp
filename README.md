@@ -26,7 +26,7 @@ a compact plugin package that can achieve pop-up display on front-end pages.
 <script>
     window.onload = () => {
         // 创建弹窗 传递一个元素进去
-        const pop_up = new jokerBox_popUp(document.getElementById("b"));
+        const pop_up = new JokerBox_popUp(document.getElementById("b"));
         // 显示弹窗 在这里代表显示 10000 毫秒
         pop_up.show("这里是弹窗内容", 10000)
     }
@@ -53,7 +53,7 @@ a compact plugin package that can achieve pop-up display on front-end pages.
 <script>
     window.onload = () => {
         // 创建弹窗 传递一个元素进去
-        const pop_up = new jokerBox_popUp(
+        const pop_up = new JokerBox_popUp(
                 document.getElementById("b"),
                 // 在构造函数的第二个参数可以传递一些样式 TODO 当然 您也可以直接使用 CSS 选择器直接修改样式
                 {
@@ -71,4 +71,5 @@ a compact plugin package that can achieve pop-up display on front-end pages.
 ```
 
 ### 测试界面
+<iframe src='https://raw.githubusercontent.com/BeardedManZhao/JokerBox-popUp/main/Test.html' style="width: 100vw;height: 50vh;"></iframe>
 
