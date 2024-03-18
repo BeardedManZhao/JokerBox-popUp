@@ -6,9 +6,11 @@ class jokerBox_popUp {
     /**
      *
      * @param dom {HTMLElement} 需要承载弹窗的元素
-     * @param color {{background:string, font:string}} 分别是背景颜色和字体颜色
+     * @param color {{color: string, background: string}} 分别是背景颜色和字体颜色
      */
     constructor(dom, color = {}) {
+
+        console.info(`jokerBox_v${jokerBox_popUp.getVersion()} -> popUp set ok!!`)
 
         // 判断背景颜色是否为 空
         if (color['background'] === undefined) {
@@ -16,8 +18,8 @@ class jokerBox_popUp {
         }
 
         // 判断字体颜色是否为空
-        if (color['font'] === undefined) {
-            color['font'] = JokerBoxUtils.invertColor(color['background']);
+        if (color['color'] === undefined) {
+            color['color'] = JokerBoxUtils.invertColor(color['background']);
         }
 
         let div1 = document.createElement("div");
@@ -41,21 +43,25 @@ class jokerBox_popUp {
         this.dom = div1;
         this.textDom = div2;
 
-        this.dom.style.backgroundColor = color['background'];
+        this.dom.style.background = color['background'];
         for (let childNode of this.dom.childNodes) {
-            childNode.style.color = color['font'];
+            childNode.style.color = color['color'];
         }
 
-        const invertColor1 = JokerBoxUtils.invertColor(color['font']);
+        const invertColor1 = JokerBoxUtils.invertColor(color['color']);
         div3.onmouseover = function () {
             this.style.color = invertColor1;
             this.style.transform = 'scale(150%)';
             this.style.textShadow = '20% 20% 20% 20% #fff';
         }
         div3.onmouseout = function () {
-            this.style.color = color['font'];
+            this.style.color = color['color'];
             this.style.transform = 'scale(100%)';
         }
+    }
+
+    static getVersion() {
+        return '1.0.0';
     }
 
     /**
