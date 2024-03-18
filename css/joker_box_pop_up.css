@@ -37,6 +37,7 @@
 
 #jokerBox_pop_up_show_div {
     position: fixed;
+    height: 0;
     top: 0;
     left: 0;
     width: 98%;

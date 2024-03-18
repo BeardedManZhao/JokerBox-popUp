@@ -27,6 +27,7 @@ class JokerBox_popUp {
 
         let div2 = document.createElement("div");
         div2.className = "pop_up_content_text";
+        div2.innerText = 'welcome to use jokerBox!!!';
 
         let div3 = document.createElement("a");
         div3.className = "pop_up_content_close";
