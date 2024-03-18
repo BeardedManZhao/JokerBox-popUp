@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pop_up</title>
+    <title>JokerBox_popUp 测试界面</title>
 </head>
 <body id="b">
 <p>您可以在这个地方进行测试！！</p>
@@ -16,6 +16,10 @@
     <input id="textValue" placeholder="要显示的文字" value="这里是弹窗内容">
 </label>
 <button onclick="run()">展示弹窗</button>
+<button onclick="showCode()">查看代码示例</button>
+<pre class="showCode_area_pre" id="code" style="border: black solid 1px">
+
+</pre>
 </body>
 
 <!-- 在下面直接进行引用即可！ -->
@@ -36,6 +40,25 @@
         );
         // 显示弹窗 在这里代表显示 10000 毫秒
         pop_up.show(document.getElementById("textValue").value, 10000)
+    }
+
+    function showCode() {
+        document.getElementsByClassName("showCode_area_pre")[0].innerText =
+            `
+// 创建弹窗 传递一个元素进去
+const pop_up = new JokerBox_popUp(
+    document.getElementById("b"),
+    // 在构造函数的第二个参数可以传递一些样式 TODO 当然 您也可以直接使用 CSS 选择器直接修改样式
+    {
+        // 背景样式
+        background: '${document.getElementById("backColor").value}',
+        // 字体颜色样式
+        color: '${document.getElementById("textColor").value === '' ? undefined : document.getElementById("textColor").value}',
+    }
+);
+// 显示弹窗 在这里代表显示 10000 毫秒
+pop_up.show('${document.getElementById("textValue").value}', 10000)
+            `
     }
 </script>
 </html>

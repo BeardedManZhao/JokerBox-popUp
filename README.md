@@ -71,5 +71,3 @@ a compact plugin package that can achieve pop-up display on front-end pages.
 ```
 
 ### 测试界面
-<iframe src='https://raw.githubusercontent.com/BeardedManZhao/JokerBox-popUp/main/Test.html' style="width: 100vw;height: 50vh;"></iframe>
-
