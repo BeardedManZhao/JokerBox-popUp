@@ -91,9 +91,9 @@ class JokerBoxUtils {
      */
     static invertColor(color) {
         // 将颜色值转换为 RGB 格式
-        const r = parseInt(color.substring(1, 2), 16);
-        const g = parseInt(color.substring(3, 2), 16);
-        const b = parseInt(color.substring(5, 2), 16);
+        const r = parseInt(color.substring(1, 3), 16);
+        const g = parseInt(color.substring(3, 5), 16);
+        const b = parseInt(color.substring(5, 7), 16);
 
         // 计算反色值
         const invertedR = 255 - r;

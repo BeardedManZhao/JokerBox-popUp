@@ -5,27 +5,37 @@
     <title>Pop_up</title>
 </head>
 <body id="b">
-<p>这里是原本的网页内容</p>
+<p>您可以在这个地方进行测试！！</p>
+<label>
+    <input id="backColor" placeholder="背景样式" value="#c0ffe0">
+</label>
+<label>
+    <input id="textColor" placeholder="字体样式，默认自动计算">
+</label>
+<label>
+    <input id="textValue" placeholder="要显示的文字" value="这里是弹窗内容">
+</label>
+<button onclick="run()">展示弹窗</button>
 </body>
 
 <!-- 在下面直接进行引用即可！ -->
 <link href="css/joker_box_pop_up.css" rel="stylesheet">
 <script src="./js/joker_box_pop_up.js"></script>
 <script>
-    window.onload = () => {
+    function run() {
         // 创建弹窗 传递一个元素进去
-        const pop_up = new jokerBox_popUp(
+        const pop_up = new JokerBox_popUp(
             document.getElementById("b"),
             // 在构造函数的第二个参数可以传递一些样式 TODO 当然 您也可以直接使用 CSS 选择器直接修改样式
             {
                 // 背景样式
-                background: "url('https://www.lingyuzhao.top/image/graphic-loading1.jpg')",
+                background: document.getElementById("backColor").value,
                 // 字体颜色样式
-                color: '#fff'
+                color: document.getElementById("textColor").value === '' ? undefined : document.getElementById("textColor").value,
             }
         );
         // 显示弹窗 在这里代表显示 10000 毫秒
-        pop_up.show("这里是弹窗内容", 10000)
+        pop_up.show(document.getElementById("textValue").value, 10000)
     }
 </script>
 </html>
