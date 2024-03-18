@@ -1,7 +1,7 @@
 /**
  * JokerBox 弹窗组件，这个组件可以实现自动的弹窗效果
  */
-class jokerBox_popUp {
+class JokerBox_popUp {
 
     /**
      *
@@ -10,7 +10,7 @@ class jokerBox_popUp {
      */
     constructor(dom, color = {}) {
 
-        console.info(`jokerBox_v${jokerBox_popUp.getVersion()} -> popUp set ok!!`)
+        console.info(`jokerBox_v${JokerBox_popUp.getVersion()} -> popUp set ok!!`)
 
         // 判断背景颜色是否为 空
         if (color['background'] === undefined) {
