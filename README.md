@@ -3,11 +3,15 @@
 小丑盒 弹窗 JS 工具包，此工具是一个小巧的插件包，能够实现在前端页面中的弹窗展示。Joker Box Pop up JS Toolkit, this tool is
 a compact plugin package that can achieve pop-up display on front-end pages.
 
+允许您使用自己的 HTML 标签做为弹窗格式，也允许您直接不指定任何 HTML 标签，自动使用内置的格式即可!
+
 ## 使用示例
 
 此工具非常小巧，您只需要直接将`joker_box_pop_up.js` 以及 `joker_box_pop_up.css` 引入到您的页面中即可，下面是一个示例！
 
 ### 简单使用示例
+
+只需要选一个标签，并将此标签做为弹窗的载体就可以构建出属于你的弹窗啦！
 
 ```html
 <!DOCTYPE html>
@@ -26,7 +30,7 @@ a compact plugin package that can achieve pop-up display on front-end pages.
 <script>
     window.onload = () => {
         // 创建弹窗 传递一个元素进去
-        const pop_up = new JokerBox_popUp(document.getElementById("b"));
+        const pop_up = JokerBox_popUp.create(document.getElementById("b"));
         // 显示弹窗 在这里代表显示 10000 毫秒
         pop_up.show("这里是弹窗内容", 10000)
     }
@@ -35,6 +39,8 @@ a compact plugin package that can achieve pop-up display on front-end pages.
 ```
 
 ### 设置样式的使用示例
+
+在这里我们展示的就是直接在构造函数中设置样式的一种操作，当然您也可以直接使用 CSS 选择器直接修改样式！
 
 ```html
 <!DOCTYPE html>

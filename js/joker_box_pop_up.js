@@ -1,5 +1,7 @@
 /**
- * JokerBox 弹窗组件，这个组件可以实现自动的弹窗效果
+ * JokerBox 弹窗组件，这个组件可以自动实现弹窗的功能，且允许您自定义弹窗的格式！
+ *
+ * JokerBox pop-up component, this component can automatically implement the pop-up function and allow you to customize the format of the pop-up!
  */
 class JokerBox_popUp {
 

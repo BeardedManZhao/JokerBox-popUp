@@ -46,7 +46,7 @@
         document.getElementsByClassName("showCode_area_pre")[0].innerText =
             `
 // 创建弹窗 传递一个元素进去
-const pop_up = new JokerBox_popUp(
+const pop_up = JokerBox_popUp.create(
     document.getElementById("b"),
     // 在构造函数的第二个参数可以传递一些样式 TODO 当然 您也可以直接使用 CSS 选择器直接修改样式
     {
