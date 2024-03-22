@@ -46,8 +46,8 @@ class JokerBox_popUp {
 
         if (cssFormatter !== undefined) {
             div1 = document.querySelector(cssFormatter);
-            const s1 = cssFormatter + ' > .pop_up_content_text';
-            const s2 = cssFormatter + ' > .pop_up_content_close';
+            const s1 = cssFormatter + ' .pop_up_content_text';
+            const s2 = cssFormatter + ' .pop_up_content_close';
             div2 = document.querySelector(s1);
             div3 = document.querySelector(s2);
             if (!(div1 && div2 && div3)) {
