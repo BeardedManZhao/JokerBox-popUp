@@ -57,8 +57,8 @@ class JokerBox_popUp {
                     "1. " + s1 + ": Text content display element（There can only be one）\n" +
                     "\n" +
                     "2. " + s2 + ": Close button display element（There can only be one）", {
-                    "your pop_up-content_text": div2,
-                    "your pop_up-content_close": div3
+                    "your pop_up_content_text": div2,
+                    "your pop_up_content_close": div3
                 });
                 return;
             }
